@@ -6,8 +6,8 @@ typedef enum {RESET = 0, SET = !RESET};	// Flagstatus;
 #define GET_BYTE_BIT(Byte, Bit) 	((Byte & (1<<Bit))==(1<<Bit))
 
 
-//Ausgänge
+//AusgÃ¤nge
 #define AusgangLichtHinten(x)		(((x) ?	(SET_BYTE_BIT(datenSendSlaves[1][AusgaengeIO], 0)) : (CLR_BYTE_BIT(datenSendSlaves[1][AusgaengeIO], 0))))
 
-//Eingänge
+//EingÃ¤nge
 #define EingangPull					GET_BYTE_BIT(datenEmpfSlaves[2][EingaengeIO], 1)
